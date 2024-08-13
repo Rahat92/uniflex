@@ -36,7 +36,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare password: string;
     declare token?: string | null;
     declare forget_code?: string | null;
-    declare user_agent?: string | null;
+    declare user_agent: string | null;
 
     declare status?: number;
 

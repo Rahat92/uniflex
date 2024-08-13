@@ -48,7 +48,6 @@ const DropDown: React.FC<Props> = ({ name, get_selected_data, multiple, default_
             get_selected_data({ selectedList, ids });
         }
     }, [selectedList]);
-
     return (
         <>
             <div className="custom_drop_down">
@@ -76,7 +75,6 @@ const DropDown: React.FC<Props> = ({ name, get_selected_data, multiple, default_
                                 </span>
                             </button>
                         </div>
-
                         <ul className="option_list custom_scroll">
                             {(state.all as anyObject)?.data?.map(
                                 (i: anyObject) => {

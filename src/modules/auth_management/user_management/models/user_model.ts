@@ -35,15 +35,15 @@ class DataModel extends Model<Infer, InferCreation> {
     declare name: string;
     declare role?: role;
 
-    declare designation?: designation;
-    declare reference?: number;
+    declare designation: designation;
+    declare reference: number;
     declare mo?: number;
     declare agm?: number;
     declare gm?: number;
     declare ed?: number;
 
     declare email: string | null;
-    declare phone_number?: string | null;
+    declare phone_number: string | null;
     declare image?: string | null;
 
     declare password?: string;

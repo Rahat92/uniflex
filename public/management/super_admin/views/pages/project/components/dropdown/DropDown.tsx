@@ -48,7 +48,6 @@ const DropDown: React.FC<Props> = ({ name, get_selected_data, multiple, default_
             get_selected_data({ selectedList, ids });
         }
     }, [selectedList]);
-
     return (
         <>
             <div className="custom_drop_down">
@@ -98,7 +97,7 @@ const DropDown: React.FC<Props> = ({ name, get_selected_data, multiple, default_
                                                     />
                                                 </div>
                                                 <div className="label">
-                                                    {i.name}
+                                                    {i.title}
                                                 </div>
                                             </label>
                                         </li>

@@ -1,0 +1,97 @@
+@hostname = http://127.0.0.1:5002/api/v1/project-responsibility-management
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10   HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "project_id": 1,
+    "user_id": 1,
+    "responsibility_title": "responsibility_title",
+    "status":"active",
+    "creator":2,
+    "created_at":"2024-07-30",
+    "updated_at":"2024-07-30"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": 1,
+    "responsibility_title": "updated responsibility_title"
+}
+
+# login
+###
+POST {{hostname}}/login HTTP/1.1 
+content-type: application/json
+# Authorization: {{token}}
+
+{
+    "email": "admin1@gmail.com",
+    "password": "12345678"
+}
+
+# logout
+###
+POST {{hostname}}/logout HTTP/1.1
+content-type: application/json
+
+{}
+
+# forget mail
+###
+POST {{hostname}}/forget HTTP/1.1
+content-type: application/json
+
+{}
+
+# soft delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
+
+# block
+###
+POST  {{hostname}}/block HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}

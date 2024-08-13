@@ -1,0 +1,110 @@
+@hostname = http://127.0.0.1:5002/api/v1/asset-management
+
+# all
+###
+GET {{hostname}}?orderByCol=id&orderByAsc=true&show_active_data=true&paginate=10   HTTP/1.1
+
+# get
+###
+GET {{hostname}}/1 HTTP/1.1
+
+# store
+###
+POST  {{hostname}}/store HTTP/1.1
+content-type: application/json
+
+{
+    "asset_category_id": 1,
+    "title": "asset title",
+    "amount": "35897593784",
+    "image": "avatar.png",
+    "invoice_picture": "avatar.png",
+    "purchase_date":"2024-07-30",
+    "is_available":true,
+    "purchase_price":100,
+    "depreciation_period":"2024-07-30",
+    "depreciation_count":100,
+    "owner_id":1000,
+    "purchased_by":1000,
+    "status":"active",
+    "creator":2,
+    "created_at":"2024-07-30",
+    "updated_at":"2024-07-30"
+}
+
+
+# update
+###
+POST {{hostname}}/update HTTP/1.1 
+content-type: application/json
+
+{
+    "id": 11,
+    "name": "user6update",
+    "email": "user6update@gmail.com",
+    "phone_number": "35897593784",
+    "image": "avatar.png",
+    "password": "12345678"
+}
+
+# login
+###
+POST {{hostname}}/login HTTP/1.1 
+content-type: application/json
+# Authorization: {{token}}
+
+{
+    "email": "admin1@gmail.com",
+    "password": "12345678"
+}
+
+# logout
+###
+POST {{hostname}}/logout HTTP/1.1
+content-type: application/json
+
+{}
+
+# forget mail
+###
+POST {{hostname}}/forget HTTP/1.1
+content-type: application/json
+
+{}
+
+# soft delete
+###
+POST  {{hostname}}/soft-delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+# restore
+###
+POST  {{hostname}}/restore HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+# block
+###
+POST  {{hostname}}/block HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6
+}
+
+
+# destroy
+###
+POST  {{hostname}}/destroy HTTP/1.1
+content-type: application/json
+
+{
+    "id": 7
+}

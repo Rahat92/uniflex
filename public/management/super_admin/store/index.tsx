@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import commonStore from './slices/common_slice';
 import users from '../views/pages/users/config/store';
 import booking from '../views/pages/booking/config/store';
-import project from '../views/pages/project/config/store';
+import project_management_store from '../views/pages/project/config/store';
 import accounts from '../views/pages/accounts/config/store';
 import account_types from '../views/pages/accounts/menus/accounts/account_types/config/store';
 import account_categories from '../views/pages/accounts/menus/accounts/account_categories/config/store';
@@ -27,12 +27,24 @@ import visit_history from '../views/pages/project_visit/menus/visit_history/conf
 import project_payment from '../views/pages/project/menus/project_payment/config/store';
 
 import contact_management_store from '../views/pages/contact_management/config/store';
+import asset_category_management_store from '../views/pages/asset_category_management/config/store';
+import asset_management_store from '../views/pages/asset_management/config/store';
+import account_log_management_store from '../views/pages/account_log_management/config/store';
+import account_number_management_store from '../views/pages/account_number_management/config/store';
+import project_customer_information_management_store from '../views/pages/project_customer_information_management/config/store';
+import account_report_approval_management_store from '../views/pages/account_report_approval_management/config/store';
+import account_report_approval_doc_management_store from '../views/pages/account_report_approval_doc_management/config/store';
+import project_customer_management_store from '../views/pages/project_customer_management/config/store';
+import project_payment_management_store from '../views/pages/project_payment_management/config/store';
+import project_responsibility_management_store from '../views/pages/project_responsibility_management/config/store';
+import project_visit_history_management_store from '../views/pages/project_visit_history_management/config/store';
+import project_visit_history_attatchment_management_store from '../views/pages/project_visit_history_attatchment_management/config/store';
 
 const store = configureStore({
     reducer: {
         users: users.reducer,
         booking: booking.reducer,
-        project: project.reducer,
+        project_management_store: project_management_store.reducer,
         accounts: accounts.reducer,
         account_types: account_types.reducer,
         account_categories: account_categories.reducer,
@@ -55,6 +67,19 @@ const store = configureStore({
         project_payment: project_payment.reducer,
         
         contact_management: contact_management_store.reducer,
+        asset_category_management: asset_category_management_store.reducer,
+        asset_management: asset_management_store.reducer,
+        account_log_management: account_log_management_store.reducer,
+        account_number_management: account_number_management_store.reducer,
+        project_customer_information_management: project_customer_information_management_store.reducer,
+        account_report_approval_management: account_report_approval_management_store.reducer,
+        account_report_approval_doc_management:account_report_approval_doc_management_store.reducer,
+        project_customer_management:project_customer_management_store.reducer,
+        project_payment_management:project_payment_management_store.reducer,
+        project_responsibility_management:project_responsibility_management_store.reducer,
+        project_visit_history_management:project_visit_history_management_store.reducer,
+        project_visit_history_attatchment_management:project_visit_history_attatchment_management_store.reducer,
+        project_management:project_management_store.reducer,
     },
     devTools: true,
 });

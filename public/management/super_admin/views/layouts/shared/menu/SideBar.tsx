@@ -37,7 +37,7 @@ const SideBar: React.FC<Props> = (props: Props) => {
                 </MenuDropDown>
                 {/* Booking  */}
                 <MenuDropDown group_title="Projects" icon="icon-desktop">
-                    <MenuDropDownItem label="All Projects" to="/project" />
+                    <MenuDropDownItem label="All Projects" to="/project-management" />
                     <MenuDropDownItem label="Create Project" to="/project/create" />
                     <MenuDropDownItem label="All Bookings" to="/booking" />
                     <MenuDropDownItem label="Create Booking" to="/booking/create" />
@@ -70,6 +70,18 @@ const SideBar: React.FC<Props> = (props: Props) => {
                 </MenuDropDown>
 
                 <MenuSingle to="/contact-management" icon="icon-envelope" label="Dashboard" />
+                <MenuSingle to="/asset-category-management" icon="icon-envelope" label="Category" />
+                <MenuSingle to="/asset-management" icon="icon-envelope" label="Asset" />
+                <MenuSingle to="/account-log-management" icon="icon-envelope" label="Account Log" />
+                <MenuSingle to="/account-number-management" icon="icon-envelope" label="Account Number" />
+                <MenuSingle to="/project-customer-information-management" icon="icon-envelope" label="Project Customer Info" />
+                <MenuSingle to="/account-report-approval-management" icon="icon-envelope" label="Account Report Approval" />
+                <MenuSingle to="/account-report-approval-doc-management" icon="icon-envelope" label="Account Report Approval Doc" />
+                <MenuSingle to="/project-customer-management" icon="icon-envelope" label="Project Customer" />
+                <MenuSingle to="project-payment-management" icon="icon-envelope" label="Project Payment" />
+                <MenuSingle to="project-responsibility-management" icon="icon-envelope" label="Project Responsibility" />
+                <MenuSingle to="project-visit-history-management" icon="icon-envelope" label="Project Visit History" />
+                <MenuSingle to="project-visit-history-attatchment-management" icon="icon-envelope" label="Project Visit History Attatchment" />
             </ul>
         </>
     );

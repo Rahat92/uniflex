@@ -28,6 +28,18 @@ import visit_history from '../views/pages/project_visit/menus/visit_history/conf
 import project_payment from '../views/pages/project/menus/project_payment/config/routes';
 
 import contact_management_routes from '../views/pages/contact_management/config/routes';
+import asset_category_management from '../views/pages/asset_category_management/config/routes';
+import asset_management from '../views/pages/asset_management/config/routes';
+import account_log_management from '../views/pages/account_log_management/config/routes';
+import account_number_management from '../views/pages/account_number_management/config/routes';
+import project_customer_information_management from '../views/pages/project_customer_information_management/config/routes';
+import account_report_approval_management from '../views/pages/account_report_approval_management/config/routes';
+import account_report_approval_doc_management from '../views/pages/account_report_approval_doc_management/config/routes';
+import project_customer_management from '../views/pages/project_customer_management/config/routes';
+import project_payment_management from '../views/pages/project_payment_management/config/routes';
+import project_responsibility_management from '../views/pages/project_responsibility_management/config/routes';
+import project_visit_history_management from '../views/pages/project_visit_history_management/config/routes';
+import project_visit_history_attatchment_management from '../views/pages/project_visit_history_attatchment_management/config/routes';
 
 interface RouteTypes extends NonIndexRouteObject {}
 const router: RouteTypes[] = [
@@ -60,7 +72,19 @@ const router: RouteTypes[] = [
             assign_visit,
             visit_history,
             project_payment,
-            contact_management_routes
+            contact_management_routes,
+            asset_category_management,
+            asset_management,
+            account_log_management,
+            account_number_management,
+            project_customer_information_management,
+            account_report_approval_management,
+            account_report_approval_doc_management,
+            project_customer_management,
+            project_payment_management,
+            project_responsibility_management,
+            project_visit_history_management,
+            project_visit_history_attatchment_management
         ],
     },
 ];

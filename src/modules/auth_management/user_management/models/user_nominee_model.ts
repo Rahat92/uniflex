@@ -37,7 +37,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare name?: string;
     declare relation?: string;
     declare age?: number;
-    declare mobile_number?: string;
+    declare mobile_number: string;
     declare percentage?: number;
 
     declare status?: status;

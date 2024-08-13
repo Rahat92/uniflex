@@ -3,14 +3,14 @@ import setup_type from './setup_type';
 const prefix: string = 'Project';
 const setup: setup_type = {
     prefix,
-    module_name: 'project',
+    module_name: 'project_management',
 
-    route_prefix: 'project',
+    route_prefix: 'project-management',
 
     api_host: location.origin,
-    api_prefix: 'projets',
+    api_prefix: 'project-management',
 
-    store_prefix: 'project',
+    store_prefix: 'project_management',
     layout_title: prefix + ' Management',
 
     all_page_title: 'All ' + prefix,

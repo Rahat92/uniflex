@@ -1,17 +1,17 @@
 import setup_type from './setup_type';
 
-const prefix: string = 'Eployee';
+const prefix: string = 'Marketing';
 const setup: setup_type = {
     prefix,
     module_name: 'users',
-
+    
     route_prefix: 'users',
 
     api_host: location.origin,
     api_prefix: 'users',
 
     store_prefix: 'users',
-    layout_title: prefix + ' Management',
+    layout_title: prefix + ' Department',
 
     all_page_title: 'All ' + prefix,
     details_page_title: 'Details ' + prefix,

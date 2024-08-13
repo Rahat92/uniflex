@@ -38,7 +38,7 @@ class DataModel extends Model<Infer, InferCreation> {
     declare mother_name?: string;
     declare husband_spouse?: string;
     declare mobile_no?: string;
-    declare nid?: string;
+    declare nid: string;
     declare dob?: string;
     declare education?: string;
     declare permanent_address?: string;

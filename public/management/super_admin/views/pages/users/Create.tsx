@@ -32,6 +32,7 @@ const Create: React.FC<Props> = (props: Props) => {
 
     async function handle_submit(e) {
         e.preventDefault();
+        console.log(e.target.values)
         let form_data = new FormData(e.target);
         form_data.append('nominees', JSON.stringify(FormPageNominees));
 
@@ -46,7 +47,8 @@ const Create: React.FC<Props> = (props: Props) => {
         <>
             <div className="page_content">
                 <div className="explore_window fixed_size">
-                    <Header page_title={setup.create_page_title}></Header>
+                    {/* <Header page_title={setup.create_page_title}></Header> */}
+                    <Header page_title={'Create User'}></Header>
                     <div className="content_body custom_scroll">
                         <form
                             onSubmit={(e) => handle_submit(e)}
@@ -66,6 +68,7 @@ const Create: React.FC<Props> = (props: Props) => {
                                             label="Role"
                                             name="role"
                                             values={[
+                                                { text: 'select', value: '' },
                                                 { text: 'Marketing', value: 'marketing' },
                                                 { text: 'Staff', value: 'staff' },
                                                 { text: 'Accountant', value: 'accountant' },

@@ -33,14 +33,14 @@ class DataModel extends Model<Infer, InferCreation> {
     declare uid: string;
     declare title: string;
 
-    declare description?: string;
     declare location?: string;
+    declare description?: string;
+    declare per_share_cost?: number;
     declare map?: string;
     declare aveneue?: string;
     declare plot?: string;
     declare road?: string;
 
-    declare per_share_cost?: number;
 
     declare video?: string;
     declare image?: string;

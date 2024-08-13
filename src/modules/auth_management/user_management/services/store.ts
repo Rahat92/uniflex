@@ -16,24 +16,31 @@ import moment from 'moment';
 async function validate(req: Request) {
     let field = '';
     let fields = [
+        'designation',
         'uid',
+        'reference',
         'name',
-        'email',
-        'father_name',
-        'mother_name',
-        'husband_spouse',
-        'phone_number',
         'nid',
-        'education',
-        'permanent_address',
-        'present_address',
+        'phone_number',
         'password',
 
-        // 'reference',
+        'mo',
+        'agm',
+        'gm',
+        'ed',
+        'agent_id',
 
-        'bank_name',
-        'branch_name',
-        'bank_account_no',
+        // 'email',
+        // 'father_name',
+        // 'mother_name',
+        // 'husband_spouse',
+        // 'education',
+        // 'permanent_address',
+        // 'present_address',
+
+        // 'bank_name',
+        // 'branch_name',
+        // 'bank_account_no',
     ];
 
     for (let index = 0; index < fields.length; index++) {
@@ -47,22 +54,22 @@ async function validate(req: Request) {
             .run(req);
     }
 
-    // field = 'reference';
-    // await body(field)
-    //     .not()
-    //     .isEmpty()
-    //     .custom(async (value) => {
-    //         const length = value.length;
-    //         if (length <= 2) {
-    //             throw new Error(
-    //                 `the <b>${field.replaceAll('_', ' ')}</b> field is required`,
-    //             );
-    //         }
-    //     })
-    //     .withMessage(
-    //         `the <b>${field.replaceAll('_', ' ')}</b> field is required`,
-    //     )
-    //     .run(req);
+    field = 'reference';
+    await body(field)
+        .not()
+        .isEmpty()
+        .custom(async (value) => {
+            const length = value.length;
+            if (length <= 2) {
+                throw new Error(
+                    `the <b>${field.replaceAll('_', ' ')}</b> field is required`,
+                );
+            }
+        })
+        .withMessage(
+            `the <b>${field.replaceAll('_', ' ')}</b> field is required`,
+        )
+        .run(req);
 
     let result = await validationResult(req);
 
@@ -133,11 +140,11 @@ async function store(
     let inputs: InferCreationAttributes<typeof data> = {
         uid: body.uid,
         name: body.name,
+        role: body.role,
         email: body.email,
         phone_number: body.phone_number,
         image: image_path,
         password: password,
-
         designation: body.designation,
         reference: reference,
         mo: mo,

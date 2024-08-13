@@ -1,4 +1,4 @@
-@hostname = http://127.0.0.1:5000/api/v1/users
+@hostname = http://127.0.0.1:5002/api/v1/project-management
 
 # all
 ###
@@ -14,11 +14,17 @@ POST  {{hostname}}/store HTTP/1.1
 content-type: application/json
 
 {
-    "name": "user4",
-    "email": "user4@gmail.com",
-    "phone_number": "35897593784",
-    "image": "avatar.png",
-    "password": "12345678"
+    "uid": "project one",
+    "title": "title",
+    "location": "location 1",
+    "description": "description",
+    "per_share_cost": 100,
+    "map": "slslsl",
+    "video": "video",
+    "image":"image",
+    "aveneue":"aveneue",
+    "plot":"plot",
+    "road":"road"
 }
 
 
@@ -28,12 +34,18 @@ POST {{hostname}}/update HTTP/1.1
 content-type: application/json
 
 {
-    "id": 11,
-    "name": "user6update",
-    "email": "user6update@gmail.com",
-    "phone_number": "35897593784",
-    "image": "avatar.png",
-    "password": "12345678"
+    "id": 1,
+    "uid": "project one",
+    "title": "title update",
+    "location": "location 1",
+    "description": "description",
+    "per_share_cost": 100,
+    "map": "slslsl",
+    "video": "video",
+    "image":"image",
+    "aveneue":"aveneue",
+    "plot":"plot",
+    "road":"road"
 }
 
 # login
@@ -67,7 +79,7 @@ POST  {{hostname}}/soft-delete HTTP/1.1
 content-type: application/json
 
 {
-    "id": 6
+    "id": 1
 }
 
 # restore
@@ -76,16 +88,7 @@ POST  {{hostname}}/restore HTTP/1.1
 content-type: application/json
 
 {
-    "id": 6
-}
-
-# block
-###
-POST  {{hostname}}/block HTTP/1.1
-content-type: application/json
-
-{
-    "id": 6
+    "id": 1
 }
 
 
@@ -95,5 +98,5 @@ POST  {{hostname}}/destroy HTTP/1.1
 content-type: application/json
 
 {
-    "id": 7
+    "id": 1
 }
