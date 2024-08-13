@@ -28,7 +28,6 @@ axios.interceptors.request.use(
         [...form_errors].forEach((e) => e.remove());
         let has_errors = document.querySelectorAll('.has_error');
         [...has_errors].forEach((e) => e.classList.remove('has_error'));
-
         // eslint-disable-next-line no-undef
         (window as any).$('.loader-wrapper').fadeIn('slow', function () {});
         return config;

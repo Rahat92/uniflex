@@ -40,6 +40,7 @@ import project_payment_management from '../views/pages/project_payment_managemen
 import project_responsibility_management from '../views/pages/project_responsibility_management/config/routes';
 import project_visit_history_management from '../views/pages/project_visit_history_management/config/routes';
 import project_visit_history_attatchment_management from '../views/pages/project_visit_history_attatchment_management/config/routes';
+import profile_management from '../views/pages/profile_management/config/routes';
 
 interface RouteTypes extends NonIndexRouteObject {}
 const router: RouteTypes[] = [
@@ -87,6 +88,17 @@ const router: RouteTypes[] = [
             project_visit_history_attatchment_management
         ],
     },
+    {
+        path: '/',
+        element: <DashboardLayout />,
+        children: [
+            {
+                path: '/profile-management',
+                element: <T1 />,
+            },
+            profile_management
+        ],
+    }
 ];
 
 export default router;

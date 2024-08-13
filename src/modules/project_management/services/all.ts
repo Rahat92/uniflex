@@ -72,6 +72,9 @@ async function all(
         select_fields = ['id', 'title', 'description', 'location', 'image', 'status'];
     }
 
+    console.log((req));
+
+
     let query: FindAndCountOptions = {
         order: [[orderByCol, orderByAsc == 'true' ? 'ASC' : 'DESC']],
         where: {

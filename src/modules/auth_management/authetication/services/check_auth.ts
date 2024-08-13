@@ -27,7 +27,7 @@ const check_auth = async (request: FastifyRequest, reply: FastifyReply) => {
             (request as anyObject).user = decoded;
             return;
         } else {
-            reply.code(401).send({ error: 'Unauthorized' });
+            reply.code(401).send({ error: 'Unauthorized token' });
             return;
         }
     } catch (error) {

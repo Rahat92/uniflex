@@ -66,7 +66,7 @@ const TopHeader: React.FC<Props> = (props: Props) => {
                                 </div>
                                 <ul className="profile-dropdown onhover-show-div p-20">
                                     <li>
-                                        <a href="#">
+                                        <a href="/admin#/profile-management/edit/12">
                                             <i className="icon-user" />
                                             Edit Profile
                                         </a>

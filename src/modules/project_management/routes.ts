@@ -1,13 +1,14 @@
 'use strict';
 import { FastifyInstance } from 'fastify';
 import controller from './controller';
+import check_auth from '../auth_management/authetication/services/check_auth';
 
 module.exports = async function (fastify: FastifyInstance) {
     let prefix: string = '/project-management';
     const controllerInstance = controller(fastify);
-
+    let middleware = { preHandler: check_auth };
     fastify
-        .get(`${prefix}`, controllerInstance.all)
+        .get(`${prefix}`, middleware , controllerInstance.all)
         .get(`${prefix}/:id`, controllerInstance.find)
         .post(`${prefix}/store`, controllerInstance.store)
         .post(`${prefix}/update`, controllerInstance.update)
