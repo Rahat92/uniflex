@@ -82,7 +82,6 @@ const SideBar: React.FC<Props> = (props: Props) => {
                 <MenuSingle to="project-responsibility-management" icon="icon-envelope" label="Project Responsibility" />
                 <MenuSingle to="project-visit-history-management" icon="icon-envelope" label="Project Visit History" />
                 <MenuSingle to="project-visit-history-attatchment-management" icon="icon-envelope" label="Project Visit History Attatchment" />
-                <MenuSingle to="profile-management/edit/1" icon="icon-envelope" label="Profile Management" />
             </ul>
         </>
     );

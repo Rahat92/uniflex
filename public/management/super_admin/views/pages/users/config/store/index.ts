@@ -6,6 +6,7 @@ import { all } from './async_actions/all';
 import { details } from './async_actions/details';
 import { store } from './async_actions/store';
 import { update } from './async_actions/update';
+import { update_profile } from './async_actions/update_profile';
 import { soft_delete } from './async_actions/soft_delete';
 import { restore } from './async_actions/restore';
 import { destroy } from './async_actions/destroy';
@@ -28,6 +29,9 @@ const storeSlice = createSlice({
                 // console.log(type, payload, meta);
             })
             .addCase(update.fulfilled, (state, { type, payload, meta }) => {
+                // console.log(type, payload, meta);
+            })
+            .addCase(update_profile.fulfilled, (state, { type, payload, meta }) => {
                 // console.log(type, payload, meta);
             })
             .addCase(restore.fulfilled, (state, { type, payload, meta }) => {

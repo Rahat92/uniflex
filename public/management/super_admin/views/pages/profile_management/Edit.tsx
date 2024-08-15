@@ -115,13 +115,9 @@ const Edit: React.FC<Props> = (props: Props) => {
                                     <div className="form_auto_fit">
                                         {[
                                             'name',
-                                            'education',
                                             'permanent_address',
                                             'present_address',
                                             'phone_number',
-                                            'father_name',
-                                            'mother_name',
-                                            'reference'
                                         ].map((i) => (
                                             <div className="form-group form-vertical">
                                                 <Input
@@ -159,131 +155,6 @@ const Edit: React.FC<Props> = (props: Props) => {
                                                 defalut_preview={get_value("image")}
                                             />
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h5 className="mb-4">Nominee Informations</h5>
-                                    {
-                                        FormPageNominees.map((i, key) => (
-                                            <div key={key}>
-                                                <h6>Nominee {key + 1}</h6>
-                                                <Nominee
-                                                    FormPageNominees={FormPageNominees}
-                                                    setFromPageNominees={setFromPageNominees}
-                                                    nominee_index={key} />
-                                            </div>
-
-                                        ))
-                                    }
-                                </div>
-
-                                <div>
-                                    <h5 className="mb-4">Agent Positions</h5>
-                                    <div className="form_auto_fit">
-
-                                        <div className="form-group form-vertical">
-                                            <Select
-                                                label="Designation"
-                                                name="designation"
-                                                value={state.item.designation}
-                                                values={[
-                                                    { text: 'ED', value: 'ed' },
-                                                    { text: 'GM', value: 'gm' },
-                                                    { text: 'AGM', value: 'agm' },
-                                                    { text: 'MO', value: 'mo' },
-                                                ]}
-                                            />
-                                        </div>
-
-                                        <div className="form-group form-vertical">
-                                            <label>Joining Reference</label>
-                                            <div className="form_elements">
-                                                <DropDown
-                                                    multiple={false}
-                                                    get_selected_data={(result) => ''}
-                                                    name={`reference_info`}
-                                                    default_value={get_relation_info('reference_info')}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group form-vertical">
-                                            <label>
-                                                MO
-                                            </label>
-                                            <div className="form_elements">
-                                                <DropDown
-                                                    multiple={false}
-                                                    get_selected_data={(result) => ''}
-                                                    name={`mo`}
-                                                    default_value={get_relation_info('mo_info')}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group form-vertical">
-                                            <label>
-                                                AGM
-                                            </label>
-                                            <div className="form_elements">
-                                                <DropDown
-                                                    multiple={false}
-                                                    get_selected_data={(result) => ''}
-                                                    name={`agm`}
-                                                    default_value={get_relation_info('agm_info')}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group form-vertical">
-                                            <label>
-                                                GM
-                                            </label>
-                                            <div className="form_elements">
-                                                <DropDown
-                                                    multiple={false}
-                                                    get_selected_data={(result) => ''}
-                                                    name={`gm`}
-                                                    default_value={get_relation_info('gm_info')}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group form-vertical">
-                                            <label>
-                                                ED
-                                            </label>
-                                            <div className="form_elements">
-                                                <DropDown
-                                                    multiple={false}
-                                                    get_selected_data={(result) => ''}
-                                                    name={`ed`}
-                                                    default_value={get_relation_info('ed_info')}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h5 className="mb-4">Bank Informations</h5>
-                                    <div className="form_auto_fit">
-                                        {[
-                                            'bank_name',
-                                            'branch_name',
-                                            'bank_account_no',
-                                            'bank_routing_no',
-                                            'mobile_banking_portal',
-                                            'mobile_banking_ac_no',
-                                        ].map((i) => (
-                                            <div className="form-group form-vertical">
-                                                <Input
-                                                    name={i}
-                                                    value={get_value(i)}
-                                                />
-                                            </div>
-                                        ))}
                                     </div>
                                 </div>
 

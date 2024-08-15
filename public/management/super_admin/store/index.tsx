@@ -39,7 +39,7 @@ import project_payment_management_store from '../views/pages/project_payment_man
 import project_responsibility_management_store from '../views/pages/project_responsibility_management/config/store';
 import project_visit_history_management_store from '../views/pages/project_visit_history_management/config/store';
 import project_visit_history_attatchment_management_store from '../views/pages/project_visit_history_attatchment_management/config/store';
-import profile_management_store from '../views/pages/profile_management/config/store';
+// import profile_management_store from '../views/pages/profile_management/config/store';
 
 const store = configureStore({
     reducer: {
@@ -81,7 +81,7 @@ const store = configureStore({
         project_visit_history_management:project_visit_history_management_store.reducer,
         project_visit_history_attatchment_management:project_visit_history_attatchment_management_store.reducer,
         project_management:project_management_store.reducer,
-        profile_management:profile_management_store.reducer,
+        // profile_management:profile_management_store.reducer,
     },
     devTools: true,
 });

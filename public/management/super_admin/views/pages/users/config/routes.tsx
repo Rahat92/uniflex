@@ -6,6 +6,7 @@ import Create from '../Create.js';
 import Details from '../Details.js';
 import Edit from '../Edit.js';
 import History from '../History.js';
+import UpdateProfile from '../UpdateProfile.js';
 
 // export { default as DashboardCounterAll} from "./All.jsx";
 
@@ -28,6 +29,10 @@ export default {
         {
             path: 'edit/:id',
             element: <Edit />,
+        },
+        {
+            path: 'edit-profile/:id',
+            element: <UpdateProfile />,
         },
         {
             path: 'details/:id',
